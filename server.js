@@ -38,7 +38,6 @@ app.post('/api/notes', (req, res) => {
         res.json(newNote);
         fs.writeFile(path.join(__dirname, "./db/db.json"), JSON.stringify(notes, null, 2), function(err) {
             if (err) throw err;
-            res.json(`Note added successfully`);
         });
           //^^ takes the new note and adds it to the notes database
       }
