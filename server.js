@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3001;
   //^^ set up all the needed packages and set up the port
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
-app.use(express.static('public'));
+// app.use(express.static('public'));
 // ^^Middleware for parsing JSON and urlencoded form data
 
 app.get('/index', (req,res) => {
